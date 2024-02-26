@@ -1,0 +1,42 @@
+/* App.css */
+.bg-lightgray {
+    background-color: rgba(128, 128, 128, 0.1); /* Adjust the color and opacity as needed */
+  }
+  
+  .emoji-icon {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .emoji-icon:hover {
+    transform: scale(1.1);
+  }
+  
+  .bg-animation {
+    animation: gradientAnimation 10s ease infinite alternate; /* Define the animation */
+  }
+  
+  @keyframes gradientAnimation {
+    0% {
+      background-color: #ff0000; /* Initial background color */
+    }
+    100% {
+      background-color: #00ff00; /* Final background color */
+    }
+  }
+  
+  @keyframes backgroundAnimation {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 0; }
+  }
+  
+  .background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure it's behind other elements */
+    background: linear-gradient(to right, #ff0000, #0000ff);
+    animation: backgroundAnimation 20s linear infinite; /* Adjust duration and timing function as needed */
+  }
+  
